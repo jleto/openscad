@@ -17,17 +17,17 @@ module razor_handle(r=20)
 					//body
 					translate([0,0,cy_r]) {
 						rotate([180,0,90]) {
-							cube([2*cu_x,cu_y-4,cu_z]);
+							cube([2*cu_x-20,cu_y-4,cu_z]);
 							translate([0,cy_r-2,0]) {
 								rotate([0,90,0]) {
-									cylinder(r=cy_r-2,h=2*cy_h);
+									cylinder(r=cy_r-2,h=2*cy_h-20);
 								}
 							}
 						}
 					}//end body
 			
 					//male connector
-					translate([cy_r-2,2*cy_h,18]) {
+					translate([cy_r-2,2*cy_h-20,18]) {
 						rotate([0,90,90]) {
 							cylinder(r=cy_r/5-.1,h=cy_h/3);
 						}
